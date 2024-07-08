@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+#background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(10px);
+    overflow: hidden;
+}
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.about-container {
+    max-width: 800px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.image-container {
+    width: 50%;
+    max-width: 50px;
+}
+
+.image-container img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.05);
+}
+
+.text-container {
+    text-align: left;
+    max-width: 600px;
+}
+
+.text-container h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.text-container p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.gradient-button {
+    background: linear-gradient(45deg, #ff6b6b, #f94d6a, #fc6076, #ff9a8b);
+    border: none;
+    border-radius: 50px;
+    padding: 15px 30px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 20px;
+    animation: gradient-border 3s infinite;
+    transition: transform 0.3s ease;
+}
+
+.gradient-button:hover {
+    background: linear-gradient(45deg, #ff9a8b, #fc6076, #f94d6a, #ff6b6b);
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes gradient-border {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
